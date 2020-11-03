@@ -12,7 +12,6 @@ class ItemSelector extends React.Component {
     }
 
     handleChange = (type) => {
-        console.log(type)
         this.setState({
             cat: type
         })

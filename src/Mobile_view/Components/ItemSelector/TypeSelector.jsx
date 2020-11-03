@@ -7,7 +7,7 @@ const TypeSelector = (props) => {
     const selectCof = () => {
         props.handleCatChange('kaffe')
     }
-    let kaffeSelected = props.selected=='kaffe'
+    let kaffeSelected = props.selected==='kaffe'
     return (
         <div className="mobile_cat_selector_container">
             <div onClick={selectCof} className={`mobile_selector_button${kaffeSelected ? ' cat_selected' : ''}`}>

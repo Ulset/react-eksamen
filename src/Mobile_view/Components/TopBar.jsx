@@ -9,7 +9,7 @@ class TopBar extends React.Component {
         return (
             <div className="mobile_topbar">
                 <h1>Eivinds</h1>
-                <h1>Kaffee</h1>
+                <h1>Cafè</h1>
             </div>
         )
     }
