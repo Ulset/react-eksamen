@@ -1,5 +1,6 @@
 import React from 'react'
 import MobileView from './Mobile_view/MobileView'
+import DesktopView from './Desktop_view/DesktopView'
 import './App.css'
 
 class App extends React.Component {
@@ -22,7 +23,7 @@ class App extends React.Component {
   render = () => {
     return (
       <div>
-        {this.state.mobile ? <MobileView /> : <p>Desktop</p>}
+        {this.state.mobile ? <MobileView /> : <DesktopView />}
       </div>
     )
   }
