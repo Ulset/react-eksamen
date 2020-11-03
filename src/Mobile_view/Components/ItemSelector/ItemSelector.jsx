@@ -26,7 +26,7 @@ class ItemSelector extends React.Component {
         })
         return (
             <div className="mobile_item_selector">
-                <TypeSelector handleCatChange={this.handleChange} />
+                <TypeSelector handleCatChange={this.handleChange} selected={this.state.cat}/>
                 {allItems}
             </div>
         )
