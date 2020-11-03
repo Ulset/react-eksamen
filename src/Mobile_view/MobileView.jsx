@@ -2,7 +2,15 @@ import React from 'react'
 import ShoppingCart from './Components/ShoppingCart';
 import TopBar from './Components/TopBar'
 import Footer from './Components/Footer'
-import ItemSelector from './Components/ItemSelector';
+import ItemSelector from './Components/ItemSelector/ItemSelector';
+
+let items = [
+    {
+        name: "sanders tiss",
+        desc: "Burde kanskje ikke drikke dette",
+        price: 80
+    }
+]
 
 
 class MobileView extends React.Component {
@@ -14,7 +22,7 @@ class MobileView extends React.Component {
         return (
             <div>
                 <TopBar />
-                <ItemSelector />
+                <ItemSelector items={items}/>
                 <Footer />
                 <ShoppingCart />
             </div>
