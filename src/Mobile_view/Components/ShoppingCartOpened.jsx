@@ -1,7 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
-import { getFID } from 'web-vitals';
 
 class ShoppingCartOpened extends React.Component {
     constructor(props){
@@ -9,24 +8,28 @@ class ShoppingCartOpened extends React.Component {
         this.setShoppingOpenStatus = (bool) => {
             props.setShoppingOpenStatus(bool)
         }
-        this.state = {
-            cart: []
+        for(let cartEl of props.cart){
+            cartEl.qnt = 1;
         }
-        props.cart.map((el)=>{
-            this.state.cart.push({
-                name: el.name,
-                price: el.price,
-                qnt: 1
-            })
-        })
+        this.state = {
+            cart: props.cart
+        }
+
+        this.removeFromShoppingCart = (el) => {
+            props.removeFromShoppingCart(el)
+        }
     }
 
     changeQnt = (targEl, incr) => {
         let cartNow = this.state.cart
         cartNow.map((el)=>{
             if(targEl.name === el.name){
-                if(!(el.qnt+incr<1)){
+                let intAfterRun = el.qnt+incr
+                if(!(intAfterRun<1)){
                     el.qnt += incr;
+                }else if(intAfterRun<1){
+                    console.log("kjører ")
+                    this.removeFromShoppingCart(targEl)
                 }
             }
         })

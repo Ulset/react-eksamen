@@ -226,7 +226,7 @@ body {
 
 .mobile_shopping_cart_content_total_text {
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 70% 30%;
     border-bottom: 1px solid black;
 }
 

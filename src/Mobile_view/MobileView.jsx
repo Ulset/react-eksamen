@@ -23,6 +23,8 @@ class MobileView extends React.Component {
     }
 
     removeFromShoppingCart = (itemEl) => {
+        console.log("kjører")
+        console.log(itemEl)
         let cartNow = this.state.shoppingCart
         cartNow.map((el, index) => {
             if(itemEl.name == el.name){
@@ -34,14 +36,19 @@ class MobileView extends React.Component {
         })
     }
 
-
     render = () => {
         return (
             <div>
                 <TopBar />
-                <ItemSelector items={this.items} addToCart={this.addToShoppingCart} removeFromCart={this.removeFromShoppingCart} cart={this.state.shoppingCart}/>
+                <ItemSelector 
+                    items={this.items} 
+                    addToCart={this.addToShoppingCart} 
+                    removeFromCart={this.removeFromShoppingCart} 
+                    cart={this.state.shoppingCart} />
                 <Footer />
-                <ShoppingCart cart={this.state.shoppingCart} />
+                <ShoppingCart 
+                    cart={this.state.shoppingCart} 
+                    removeFromShoppingCart={this.removeFromShoppingCart}/>
             </div>
         )
     }

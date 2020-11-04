@@ -11,6 +11,10 @@ class ShoppingCart extends React.Component {
             opened: false,
             items: props.cart
         }
+
+        this.removeFromShoppingCart = (el) => {
+            props.removeFromShoppingCart(el)
+        }
     }
 
     setShoppingOpenStatus = (bool) => {
@@ -32,7 +36,10 @@ class ShoppingCart extends React.Component {
     openedShoppingCartContent = () => {
         let items = this.getShoppingItems()
         return (
-            <ShoppingCartOpened cart={this.state.items} setShoppingOpenStatus={this.setShoppingOpenStatus}/>
+            <ShoppingCartOpened 
+                cart={this.state.items} 
+                setShoppingOpenStatus={this.setShoppingOpenStatus}
+                removeFromShoppingCart={this.removeFromShoppingCart}/>
         )
     }
 
