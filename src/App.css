@@ -106,7 +106,7 @@ body {
 }
 
 
-.mobile_shoppingcart_closed {
+.mobile_shoppingcart {
     border-radius: 10px 10px 0 0;
     width: 100%;
     height: 8vh;
@@ -115,9 +115,15 @@ body {
     background-color: #31B492;
     z-index: 2;
     box-shadow: 0px 0px 25px 6px rgba(0,0,0,0.2);
+    transition: 0.2s;
 }
 
-.mobile_shoppingcart_closed > .logo_container {
+.mobile_shoppingcart.opened {
+    height: 100vh;
+    border-radius: 0;
+}
+
+.mobile_shoppingcart > .logo_container {
     height: 100%;
     display: flex;
     align-items: center;
