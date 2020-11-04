@@ -20,7 +20,15 @@ class ShoppingCart extends React.Component {
     openedShoppingCartContent = () => {
         return (
             <div>
-                
+
+            </div>
+        )
+    }
+
+    unOpenedShoppingCartContent = () => {
+        return (
+            <div className="logo_container">
+                <FontAwesomeIcon icon={faShoppingCart} size="2x" className="mobile_shopping_cart_icon" />
             </div>
         )
     }
@@ -29,10 +37,8 @@ class ShoppingCart extends React.Component {
         return (
             <div className={`mobile_shoppingcart${this.state.opened ? ' opened' : ''}`} onClick={this.openShoppingCart}>
                 {!this.state.opened ? 
-                    <div className="logo_container">
-                        <FontAwesomeIcon icon={faShoppingCart} size="2x" className="mobile_shopping_cart_icon" />
-                    </div>
-                : this.openedShoppingCartContent()}
+                    this.unOpenedShoppingCartContent()
+                    : this.openedShoppingCartContent()}
             </div>
         )
     }
