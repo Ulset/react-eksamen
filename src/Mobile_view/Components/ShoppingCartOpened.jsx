@@ -25,7 +25,9 @@ class ShoppingCartOpened extends React.Component {
         let cartNow = this.state.cart
         cartNow.map((el)=>{
             if(targEl.name === el.name){
-                el.qnt += incr;
+                if(!(el.qnt+incr<1)){
+                    el.qnt += incr;
+                }
             }
         })
         this.setState({
@@ -47,17 +49,37 @@ class ShoppingCartOpened extends React.Component {
         )
     }
 
+    getShoppingCartTotal = () => {
+        let total = 0;
+        this.state.cart.map((el) => {
+            total += el.price*el.qnt;
+        })
+        return total;
+    }
+
     render = () => {
         let allItems = this.state.cart.map((el) => {
             return this.generateShoppingCartEl(el)
         })
+        let totalPrice = this.getShoppingCartTotal();
         return (
             <div className="mobile_shopping_cart_opened_container">
                 <div className="mobile_shopping_cart_header">
                     <FontAwesomeIcon icon={faTimes} onClick={()=>{this.setShoppingOpenStatus(false)}} className="mobile_shopping_cart_opened_close_button" />
                 </div>
                 <div className="mobile_shopping_cart_content">
-                    {allItems}
+                    <div className="mobile_shopping_cart_content_items">
+                        {allItems}
+                    </div>
+                    <div className="mobile_shopping_cart_content_total">
+                        <div className="mobile_shopping_cart_content_total_text">
+                            <p>Total sum</p>
+                            <p>{totalPrice} kr</p>
+                        </div>
+                        <div className="mobile_shopping_cart_content_total_button">
+                            <p>Kjøp</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         )
