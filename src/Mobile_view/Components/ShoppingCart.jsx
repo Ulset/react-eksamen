@@ -1,4 +1,5 @@
 import React from 'react'
+import ShoppingCartOpened from './ShoppingCartOpened'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
@@ -13,15 +14,13 @@ class ShoppingCart extends React.Component {
 
     openShoppingCart = () => {
         this.setState({
-            opened: this.state.opened
+            opened: true
         })
     }
 
     openedShoppingCartContent = () => {
         return (
-            <div>
-
-            </div>
+            <ShoppingCartOpened />
         )
     }
 

@@ -74,49 +74,49 @@ let coffe = [
 let dessert = [
     {
         name: "Brownies",
-        desc: "Denne har du smakt før",
+        desc: "Hardt på utsiden, myk inni",
         price: 44,
         cat: "dessert",
         img: "https://www.drinktrade.com/img/onboarding/question-1.png"
     },
     {
         name: "Oreokake",
-        desc: "Denne har du smakt før",
+        desc: "2 favoritter i en",
         price: 54,
         cat: "dessert",
         img: "https://www.drinktrade.com/img/onboarding/question-1.png"
     },
     {
         name: "Kanelbolle",
-        desc: "Denne har du smakt før",
+        desc: "Smaker jul",
         price: 46,
         cat: "dessert",
         img: "https://www.drinktrade.com/img/onboarding/question-1.png"
     },
     {
         name: "Croissant",
-        desc: "Denne har du smakt før",
+        desc: "Fransk",
         price: 38,
         cat: "dessert",
         img: "https://www.drinktrade.com/img/onboarding/question-1.png"
     },
     {
         name: "Chiapudding",
-        desc: "Denne har du smakt før",
+        desc: "God.",
         price: 42,
         cat: "dessert",
         img: "https://www.drinktrade.com/img/onboarding/question-1.png"
     },
     {
         name: "Brioche",
-        desc: "Denne har du smakt før",
+        desc: "Vet ikke helt hva dette er.",
         price: 44,
         cat: "dessert",
         img: "https://www.drinktrade.com/img/onboarding/question-1.png"
     },
     {
         name: "Scones",
-        desc: "Denne har du smakt før",
+        desc: "Rart rundstykke",
         price: 37,
         cat: "dessert",
         img: "https://www.drinktrade.com/img/onboarding/question-1.png"
