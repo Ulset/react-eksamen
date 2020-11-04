@@ -17,7 +17,6 @@ class MobileView extends React.Component {
     addToShoppingCart = (itemEl) => {
         let cartNow = this.state.shoppingCart
         cartNow.push(itemEl)
-        console.log(cartNow)
         this.setState({
             shoppingCart: cartNow
         })
@@ -30,7 +29,6 @@ class MobileView extends React.Component {
                 cartNow.pop(index)
             }
         })
-        console.log(cartNow)
         this.setState({
             shoppingCart: cartNow
         })
