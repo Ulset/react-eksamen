@@ -13,9 +13,9 @@ class ShoppingCart extends React.Component {
         }
     }
 
-    openShoppingCart = () => {
+    setShoppingOpenStatus = (bool) => {
         this.setState({
-            opened: true
+            opened: bool
         })
     }
 
@@ -32,13 +32,13 @@ class ShoppingCart extends React.Component {
     openedShoppingCartContent = () => {
         let items = this.getShoppingItems()
         return (
-            <ShoppingCartOpened />
+            <ShoppingCartOpened cart={this.state.items} setShoppingOpenStatus={this.setShoppingOpenStatus}/>
         )
     }
 
     unOpenedShoppingCartContent = () => {
         return (
-            <div className="logo_container" onClick={this.openShoppingCart}>
+            <div className="logo_container" onClick={()=>{this.setShoppingOpenStatus(true)}}>
                 <FontAwesomeIcon icon={faShoppingCart} size="2x" className="mobile_shopping_cart_icon" />
             </div>
         )

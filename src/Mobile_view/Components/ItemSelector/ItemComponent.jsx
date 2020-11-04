@@ -10,7 +10,6 @@ class ItemComponent extends React.Component {
         this.state = {
             clicked: false
         }
-        console.log(props.addToCartFunc)
         this.addToCartFunc = (itemEl) => {
             props.addToCartFunc(itemEl)
         }
