@@ -5,10 +5,11 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 
 class ShoppingCart extends React.Component {
-    constructor(){
+    constructor(props){
         super();
         this.state = {
-            opened: false
+            opened: false,
+            items: props.cart
         }
     }
 
@@ -18,7 +19,18 @@ class ShoppingCart extends React.Component {
         })
     }
 
+    getShoppingItems = () => {
+        let out = []
+        let count = 0
+        for(let cartEl of this.state.items){
+            out.push(<p key={count}>{cartEl.name}</p>)
+            count++;
+        }
+        return out
+    }
+
     openedShoppingCartContent = () => {
+        let items = this.getShoppingItems()
         return (
             <ShoppingCartOpened />
         )
@@ -26,7 +38,7 @@ class ShoppingCart extends React.Component {
 
     unOpenedShoppingCartContent = () => {
         return (
-            <div className="logo_container">
+            <div className="logo_container" onClick={this.openShoppingCart}>
                 <FontAwesomeIcon icon={faShoppingCart} size="2x" className="mobile_shopping_cart_icon" />
             </div>
         )
@@ -34,7 +46,7 @@ class ShoppingCart extends React.Component {
 
     render = () => {
         return (
-            <div className={`mobile_shoppingcart${this.state.opened ? ' opened' : ''}`} onClick={this.openShoppingCart}>
+            <div className={`mobile_shoppingcart${this.state.opened ? ' opened' : ''}`}>
                 {!this.state.opened ? 
                     this.unOpenedShoppingCartContent()
                     : this.openedShoppingCartContent()}

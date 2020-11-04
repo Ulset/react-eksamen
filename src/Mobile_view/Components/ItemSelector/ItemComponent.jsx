@@ -10,12 +10,24 @@ class ItemComponent extends React.Component {
         this.state = {
             clicked: false
         }
+        console.log(props.addToCartFunc)
+        this.addToCartFunc = (itemEl) => {
+            props.addToCartFunc(itemEl)
+        }
+        this.removeFromCart = (itemEl) => {
+            props.removeFromCart(itemEl)
+        }
     }
 
     handleClick = () => {
         this.setState({
             clicked: !this.state.clicked
         })
+        if(!this.state.clicked){
+            this.addToCartFunc(this.item)
+        }else{
+            this.removeFromCart(this.item)
+        }
     }
 
     render = () => {
