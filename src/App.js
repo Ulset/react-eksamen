@@ -3,6 +3,7 @@ import MobileView from './Mobile_view/MobileView'
 import DesktopView from './Desktop_view/DesktopView'
 import '../node_modules/font-awesome/css/font-awesome.min.css'; 
 import './App.css'
+import items from './allItems'
 
 class App extends React.Component {
   constructor(){
@@ -24,7 +25,7 @@ class App extends React.Component {
   render = () => {
     return (
       <div>
-        {this.state.mobile ? <MobileView /> : <DesktopView />}
+        {this.state.mobile ? <MobileView items={items}/> : <DesktopView items={items}/>}
       </div>
     )
   }

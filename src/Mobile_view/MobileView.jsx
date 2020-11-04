@@ -4,25 +4,17 @@ import TopBar from './Components/TopBar'
 import Footer from './Components/Footer'
 import ItemSelector from './Components/ItemSelector/ItemSelector';
 
-let items = [
-    {
-        name: "sanders tiss",
-        desc: "Burde kanskje ikke drikke dette",
-        price: 80
-    }
-]
-
-
 class MobileView extends React.Component {
-    constructor(){
+    constructor(props){
         super();
+        this.items = props.items
     }
 
     render = () => {
         return (
             <div>
                 <TopBar />
-                <ItemSelector items={items}/>
+                <ItemSelector items={this.items}/>
                 <Footer />
                 <ShoppingCart />
             </div>

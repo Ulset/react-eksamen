@@ -17,12 +17,20 @@ class ItemSelector extends React.Component {
         })
     }
 
-    render = () => {
+    getItems = () => {
         let counter = 0
-        let allItems = this.state.items.map(function(el){
+        let allItems = []
+        this.state.items.map(el => {
             counter++;
-            return <ItemComponent item={el} key={counter} />
+            if(el.cat === this.state.cat){
+                allItems.push(<ItemComponent item={el} key={counter} />)
+            }
         })
+        return allItems
+    }
+
+    render = () => {
+        let allItems = this.getItems();
         return (
             <div className="mobile_item_selector">
                 <TypeSelector handleCatChange={this.handleChange} selected={this.state.cat}/>
