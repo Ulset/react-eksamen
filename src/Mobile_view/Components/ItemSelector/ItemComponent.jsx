@@ -12,7 +12,7 @@ class ItemComponent extends React.Component {
         }
     }
 
-    handleAddToCart = () => {
+    handleClick = () => {
         this.setState({
             clicked: !this.state.clicked
         })
@@ -30,7 +30,7 @@ class ItemComponent extends React.Component {
                     <div></div>
                     <div className="mobile_item_price_container">
                         <p><b>kr: {this.item.price}</b></p>
-                        <div className={`mobile_item_price_container_add_button${this.state.clicked ? ' clicked' : ''}`} onClick={this.handleAddToCart}>
+                        <div className={`mobile_item_price_container_add_button${this.state.clicked ? ' clicked' : ''}`} onClick={this.handleClick}>
                             <FontAwesomeIcon icon={faPlus} size="2x" className="mobile_add_to_cart_icon" />
                         </div>
                     </div>
