@@ -35,10 +35,10 @@ class ShoppingCartOpened extends React.Component {
 
     generateShoppingCartEl = (el) => {
         return (
-            <div >
+            <div className="mobile_shopping_cart_el">
                 <p>{el.name}</p>
                 <p>{el.price*el.qnt} kr</p>
-                <div>
+                <div className="mobile_shopping_cart_el_change_qnt">
                     <FontAwesomeIcon icon={faMinus} onClick={()=>{this.changeQnt(el, -1)}}/>
                     <p>{el.qnt}</p>
                     <FontAwesomeIcon icon={faPlus} onClick={()=>{this.changeQnt(el, 1)}}/>
