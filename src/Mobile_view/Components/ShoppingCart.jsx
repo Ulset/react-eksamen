@@ -13,7 +13,7 @@ class ShoppingCart extends React.Component {
 
     openShoppingCart = () => {
         this.setState({
-            opened: true
+            opened: this.state.opened
         })
     }
 

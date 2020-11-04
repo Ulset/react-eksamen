@@ -75,10 +75,9 @@ body {
     height: 150px;
     background: rgb(187,241,200);
     background: linear-gradient(128deg, rgba(187,241,200,1) 0%, rgba(214,246,222,1) 100%);
-    box-shadow: 5px 5px 10px 3px rgba(0,0,0,0.26);
+    box-shadow: 5px 5px 15px 1px rgba(0,0,0,0.15);
     display: grid;
     grid-template-columns: 150px auto;
-    grid-template-rows: 150x;
 }
 
 .mobile_item_component_picture_container {
@@ -109,6 +108,41 @@ body {
     font-style: normal;
     margin: 0px;
 }
+
+.mobile_item_price_container {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 80% 20%;
+    justify-content: center;
+}
+
+.mobile_item_price_container_add_button {
+    position: relative;
+    height: 33px;
+    width: 33px;
+    border-radius: 100%;
+    background-color: #31B492;
+    box-shadow: 3px 3px 8px 1px rgba(0,0,0,0.2);
+    transition: 0.2s;
+}
+
+.mobile_item_price_container_add_button.clicked {
+    background-color: #EEEEEE;
+    transform: rotate(45deg);
+}
+
+.mobile_item_price_container_add_button.clicked .mobile_add_to_cart_icon {
+    color: #E55A5A;
+}
+
+.mobile_add_to_cart_icon {
+    position: absolute;
+    left: 8px;
+    top: 6px;
+    font-size: 20px;
+    color: white;
+}
+
 
 
 .mobile_shoppingcart {

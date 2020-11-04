@@ -1,10 +1,21 @@
 
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 class ItemComponent extends React.Component {
     constructor(props){
         super();
         this.item = props.item
+        this.state = {
+            clicked: false
+        }
+    }
+
+    handleAddToCart = () => {
+        this.setState({
+            clicked: !this.state.clicked
+        })
     }
 
     render = () => {
@@ -17,7 +28,12 @@ class ItemComponent extends React.Component {
                     <h2>{this.item.name}</h2>
                     <p>{this.item.desc}</p>
                     <div></div>
-                    <p><b>kr: {this.item.price}</b></p>
+                    <div className="mobile_item_price_container">
+                        <p><b>kr: {this.item.price}</b></p>
+                        <div className={`mobile_item_price_container_add_button${this.state.clicked ? ' clicked' : ''}`} onClick={this.handleAddToCart}>
+                            <FontAwesomeIcon icon={faPlus} size="2x" className="mobile_add_to_cart_icon" />
+                        </div>
+                    </div>
                 </div>
             </div>
         )
