@@ -73,11 +73,11 @@ class ShoppingCartOpened extends React.Component {
                     </div>
                     <div className="mobile_shopping_cart_content_total">
                         <div className="mobile_shopping_cart_content_total_text">
-                            <p>Total sum</p>
-                            <p>{totalPrice} kr</p>
+                            <p><b>Total sum</b></p>
+                            <p><b>{totalPrice} kr</b></p>
                         </div>
                         <div className="mobile_shopping_cart_content_total_button">
-                            <p>Kjøp</p>
+                            <p>KJØP</p>
                         </div>
                     </div>
                 </div>

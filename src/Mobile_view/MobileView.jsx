@@ -26,7 +26,7 @@ class MobileView extends React.Component {
         let cartNow = this.state.shoppingCart
         cartNow.map((el, index) => {
             if(itemEl.name == el.name){
-                cartNow.pop(index)
+                cartNow.splice(index, 1)
             }
         })
         this.setState({
@@ -39,7 +39,7 @@ class MobileView extends React.Component {
         return (
             <div>
                 <TopBar />
-                <ItemSelector items={this.items} addToCart={this.addToShoppingCart} removeFromCart={this.removeFromShoppingCart}/>
+                <ItemSelector items={this.items} addToCart={this.addToShoppingCart} removeFromCart={this.removeFromShoppingCart} cart={this.state.shoppingCart}/>
                 <Footer />
                 <ShoppingCart cart={this.state.shoppingCart} />
             </div>

@@ -7,6 +7,7 @@ class ItemSelector extends React.Component {
         super();
         this.state = {
             items: props.items,
+            cart: props.cart,
             cat: 'kaffe'
         }
         this.addToCart = (itemEl) => {
@@ -29,7 +30,8 @@ class ItemSelector extends React.Component {
         this.state.items.map(el => {
             counter++;
             if(el.cat === this.state.cat){
-                allItems.push(<ItemComponent item={el} key={counter} addToCartFunc={this.addToCart} removeFromCart={this.removeFromCart} />)
+                let isPLacedInCart = this.state.cart.includes(el);
+                allItems.push(<ItemComponent item={el} key={counter} addToCartFunc={this.addToCart} removeFromCart={this.removeFromCart} isPlacedInCart={isPLacedInCart}/>)
             }
         })
         return allItems

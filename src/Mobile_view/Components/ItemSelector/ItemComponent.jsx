@@ -8,7 +8,7 @@ class ItemComponent extends React.Component {
         super();
         this.item = props.item
         this.state = {
-            clicked: false
+            clicked: props.isPlacedInCart
         }
         this.addToCartFunc = (itemEl) => {
             props.addToCartFunc(itemEl)
