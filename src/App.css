@@ -23,11 +23,11 @@ body {
 }
 
 .mobile_cat_selector_container {
-    font-size: 22px;
+    font-size: 20px;
     display: grid;
     gap: 10px;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: 27px;
+    grid-template-rows: 23px;
 }
 
 .mobile_selector_button {
