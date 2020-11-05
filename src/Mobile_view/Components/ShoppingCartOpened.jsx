@@ -37,9 +37,9 @@ class ShoppingCartOpened extends React.Component {
         })
     }
 
-    generateShoppingCartEl = (el) => {
+    generateShoppingCartEl = (el, i) => {
         return (
-            <div className="mobile_shopping_cart_el">
+            <div className="mobile_shopping_cart_el" key={i}>
                 <p>{el.name}</p>
                 <p>{el.price*el.qnt} kr</p>
                 <div className="mobile_shopping_cart_el_change_qnt">
@@ -60,8 +60,8 @@ class ShoppingCartOpened extends React.Component {
     }
 
     render = () => {
-        let allItems = this.state.cart.map((el) => {
-            return this.generateShoppingCartEl(el)
+        let allItems = this.state.cart.map((el, i) => {
+            return this.generateShoppingCartEl(el, i)
         })
         let totalPrice = this.getShoppingCartTotal();
         return (

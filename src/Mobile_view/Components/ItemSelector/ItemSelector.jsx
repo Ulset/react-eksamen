@@ -6,16 +6,15 @@ class ItemSelector extends React.Component {
     constructor(props){
         super();
         this.state = {
-            items: props.items,
-            cart: props.cart,
             cat: 'kaffe'
         }
-        this.addToCart = (itemEl) => {
-            props.addToCart(itemEl)
-        }
-        this.removeFromCart = (itemEl) => {
-            props.removeFromCart(itemEl)
-        }
+    }
+    
+    addToCart = (itemEl) => {
+        this.props.addToCart(itemEl)
+    }
+    removeFromCart = (itemEl) => {
+        this.props.removeFromCart(itemEl)
     }
 
     handleChange = (type) => {
@@ -24,18 +23,33 @@ class ItemSelector extends React.Component {
         })
     }
 
+    componentDidUpdate = (prevProps) => {
+        if(prevProps !== this.props){
+            this.setState(this.state)
+        }
+    }
+
+    getItems = () => {
+        let counter = 0
+        let allItems = []
+        this.props.items.map(el => {
+            counter++;
+            if(el.cat === this.state.cat){
+                let isPLacedInCart = this.props.cart.includes(el);
+                allItems.push(<ItemComponent item={el} key={counter} addToCartFunc={this.addToCart} removeFromCart={this.removeFromCart} isPlacedInCart={isPLacedInCart}/>)
+            }
+        })
+        return allItems
+    }
+
     render = () => {
+        let allItems = this.getItems();
         return (
             <div className="mobile_item_selector">
                 <TypeSelector handleCatChange={this.handleChange} selected={this.state.cat}/>
-                {this.state.items.filter((el) => {
-                    return el.cat === this.state.cat
-                }).map((el, index) => {
-                    let isPLacedInCart = this.state.cart.includes(el);
-                    return <ItemComponent item={el} key={index} addToCartFunc={this.addToCart} removeFromCart={this.removeFromCart} isPlacedInCart={isPLacedInCart}/>
-                })}
+                {allItems}
             </div>
-        )
+        )        
     }
 }
 
