@@ -28,7 +28,6 @@ class ShoppingCartOpened extends React.Component {
                 if(!(intAfterRun<1)){
                     el.qnt += incr;
                 }else if(intAfterRun<1){
-                    console.log("kjører ")
                     this.removeFromShoppingCart(targEl)
                 }
             }

@@ -25,21 +25,15 @@ class ItemSelector extends React.Component {
     }
 
     render = () => {
-        let counter = 0
-        let allItems = []
-        let items = this.state.items
-        let cart = this.state.cart
-        for(let el of items){
-            counter++;
-            if(el.cat === this.state.cat){
-                let isPLacedInCart = cart.includes(el);
-                allItems.push(<ItemComponent item={el} key={counter} addToCartFunc={this.addToCart} removeFromCart={this.removeFromCart} isPlacedInCart={isPLacedInCart}/>)
-            }
-        }
         return (
             <div className="mobile_item_selector">
                 <TypeSelector handleCatChange={this.handleChange} selected={this.state.cat}/>
-                {allItems}
+                {this.state.items.filter((el) => {
+                    return el.cat === this.state.cat
+                }).map((el, index) => {
+                    let isPLacedInCart = this.state.cart.includes(el);
+                    return <ItemComponent item={el} key={index} addToCartFunc={this.addToCart} removeFromCart={this.removeFromCart} isPlacedInCart={isPLacedInCart}/>
+                })}
             </div>
         )
     }

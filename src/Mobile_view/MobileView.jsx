@@ -23,8 +23,6 @@ class MobileView extends React.Component {
     }
 
     removeFromShoppingCart = (itemEl) => {
-        console.log("kjører")
-        console.log(itemEl)
         let cartNow = this.state.shoppingCart
         cartNow.map((el, index) => {
             if(itemEl.name == el.name){
