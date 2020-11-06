@@ -2,7 +2,8 @@ import React from 'react'
 import MobileView from './Mobile_view/MobileView'
 import DesktopView from './Desktop_view/DesktopView'
 import '../node_modules/font-awesome/css/font-awesome.min.css'; 
-import './App.css'
+import './Mobile_view.css'
+import './Desktop_view.css'
 import items from './allItems'
 
 class App extends React.Component {

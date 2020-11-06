@@ -42,7 +42,7 @@ class MobileView extends React.Component {
 
     render = () => {
         return (
-            <div>
+            <div className="mobile_view_body">
                 <TopBar />
                 <ItemSelector 
                     items={this.items} 
