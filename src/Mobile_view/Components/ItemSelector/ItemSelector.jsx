@@ -30,13 +30,11 @@ class ItemSelector extends React.Component {
     }
 
     getItems = () => {
-        let counter = 0
         let allItems = []
-        this.props.items.map(el => {
-            counter++;
+        this.props.items.map((el, index) => {
             if(el.cat === this.state.cat){
                 let isPLacedInCart = this.props.cart.includes(el);
-                allItems.push(<ItemComponent item={el} key={counter} addToCartFunc={this.addToCart} removeFromCart={this.removeFromCart} isPlacedInCart={isPLacedInCart}/>)
+                allItems.push(<ItemComponent item={el} key={index} addToCartFunc={this.addToCart} removeFromCart={this.removeFromCart} isPlacedInCart={isPLacedInCart}/>)
             }
         })
         return allItems

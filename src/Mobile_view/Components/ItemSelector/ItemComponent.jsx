@@ -7,9 +7,6 @@ class ItemComponent extends React.Component {
     constructor(props){
         super();
         this.item = props.item
-        this.state = {
-            clicked: props.isPlacedInCart
-        }
         this.addToCartFunc = (itemEl) => {
             props.addToCartFunc(itemEl)
         }
@@ -19,10 +16,7 @@ class ItemComponent extends React.Component {
     }
 
     handleClick = () => {
-        this.setState({
-            clicked: !this.state.clicked
-        })
-        if(!this.state.clicked){
+        if(!this.props.isPlacedInCart){
             this.addToCartFunc(this.item)
         }else{
             this.removeFromCart(this.item)
@@ -41,7 +35,7 @@ class ItemComponent extends React.Component {
                     <div></div>
                     <div className="mobile_item_price_container">
                         <p><b>kr: {this.item.price}</b></p>
-                        <div className={`mobile_item_price_container_add_button${this.state.clicked ? ' clicked' : ''}`} onClick={this.handleClick}>
+                        <div className={`mobile_item_price_container_add_button${this.props.isPlacedInCart ? ' clicked' : ''}`} onClick={this.handleClick}>
                             <FontAwesomeIcon icon={faPlus} size="2x" className="mobile_add_to_cart_icon" />
                         </div>
                     </div>

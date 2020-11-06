@@ -234,6 +234,10 @@ body {
     font-size: 135%;
 }
 
+.mobile_shopping_cart_content_total_text > p:nth-child(2) {
+    text-align: right;
+}
+
 .mobile_shopping_cart_content_total_button {
     background-color: #31B492;
     width: 80%;

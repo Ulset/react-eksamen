@@ -6,17 +6,13 @@ class ShoppingCartOpened extends React.Component {
     constructor(props){
         super();
         this.setShoppingOpenStatus = (bool) => {
-            props.setShoppingOpenStatus(bool)
+            this.props.setShoppingOpenStatus(bool)
         }
         for(let cartEl of props.cart){
             cartEl.qnt = 1;
         }
         this.state = {
             cart: props.cart
-        }
-
-        this.removeFromShoppingCart = (el) => {
-            props.removeFromShoppingCart(el)
         }
     }
 
@@ -28,7 +24,7 @@ class ShoppingCartOpened extends React.Component {
                 if(!(intAfterRun<1)){
                     el.qnt += incr;
                 }else if(intAfterRun<1){
-                    this.removeFromShoppingCart(targEl)
+                    this.props.removeFromShoppingCart(el)
                 }
             }
         })
