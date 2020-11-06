@@ -3,12 +3,12 @@ html {
 }
 
 body {
-    background-color: #342B38;
     margin: 0px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .mobile_view_body {
-    font-family: 'Roboto', sans-serif;
+    background-color: #342B38;
 }
 
 
