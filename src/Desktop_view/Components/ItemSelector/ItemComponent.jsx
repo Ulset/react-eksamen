@@ -25,7 +25,7 @@ class ItemComponent extends React.Component {
 
     render = () => {
         return (
-            <div className="desktop_item_component">
+            <div className="desktop_item_component" onClick={this.handleClick}>
                 <div className="mobile_item_component_picture_container">
                     <img src={this.item.img}/>
                 </div>
@@ -35,7 +35,7 @@ class ItemComponent extends React.Component {
                     <div></div>
                     <div className="mobile_item_price_container">
                         <p><b>kr: {this.item.price}</b></p>
-                        <div className={`mobile_item_price_container_add_button${this.props.isPlacedInCart ? ' clicked' : ''}`} onClick={this.handleClick}>
+                        <div className={`mobile_item_price_container_add_button${this.props.isPlacedInCart ? ' clicked' : ''}`}>
                             <FontAwesomeIcon icon={faPlus} size="2x" className="mobile_add_to_cart_icon" />
                         </div>
                     </div>
