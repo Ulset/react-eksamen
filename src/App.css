@@ -213,6 +213,10 @@ body {
     overflow-x: hidden;
 }
 
+.mobile_shopping_cart_thank_you > h3 {
+    text-align: center;
+}
+
 .mobile_shopping_cart_content_total {
     height: 20%;
     width: 80%;
@@ -222,6 +226,7 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: 20% 80%;
 }
+
 
 
 .mobile_shopping_cart_content_total_text {

@@ -48,6 +48,14 @@ class ShoppingCartOpened extends React.Component {
         )
     }
 
+    generateThankYouEl = () => {
+        return (
+            <div className="mobile_shopping_cart_thank_you">
+                <h3>Takk for handelen!</h3>
+            </div>
+        )
+    }
+
     getShoppingCartTotal = () => {
         let total = 0;
         this.state.cart.map((el) => {
@@ -97,7 +105,7 @@ class ShoppingCartOpened extends React.Component {
                 </div>
                 <div className="mobile_shopping_cart_content">
                     <div className="mobile_shopping_cart_content_items">
-                        {allItems}
+                        {this.state.buyStatus !== "done" ? allItems : this.generateThankYouEl()}
                     </div>
                     <div className="mobile_shopping_cart_content_total">
                         <div className="mobile_shopping_cart_content_total_text">
