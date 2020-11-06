@@ -240,15 +240,44 @@ body {
 
 .mobile_shopping_cart_content_total_button {
     background-color: #31B492;
+    height: 50px;
     width: 80%;
-    height: 40%;
     margin: auto;
     border-radius: 5px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 5px 5px 10px 3px rgba(0,0,0,0.16)
+    box-shadow: 5px 5px 10px 3px rgba(0,0,0,0.16);
+    transition: 0.5s;
+}
+
+@keyframes spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.mobile_shopping_cart_content_total_button.spinning {
+    background-color: #FFFF66;
+    height: 50px;
+    width: 50px;
+    border: 1px dashed black;
+    border-radius: 100%;
+    box-shadow: none;
+    animation: spinning;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+}
+
+.mobile_shopping_cart_content_total_button.done {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
 }
 
 .mobile_shopping_cart_content_total_button > p {

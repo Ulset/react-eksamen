@@ -34,6 +34,12 @@ class MobileView extends React.Component {
         })
     }
 
+    emptyShoppingCart = () => {
+        this.setState({
+            shoppingCart: []
+        })
+    }
+
     render = () => {
         return (
             <div>
@@ -46,7 +52,8 @@ class MobileView extends React.Component {
                 <Footer />
                 <ShoppingCart 
                     cart={this.state.shoppingCart} 
-                    removeFromShoppingCart={this.removeFromShoppingCart}/>
+                    removeFromShoppingCart={this.removeFromShoppingCart}
+                    emptyShoppingCart={this.emptyShoppingCart} />
             </div>
         )
     }

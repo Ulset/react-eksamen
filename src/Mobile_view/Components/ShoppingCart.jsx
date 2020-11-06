@@ -9,7 +9,6 @@ class ShoppingCart extends React.Component {
         super();
         this.state = {
             opened: false,
-            items: props.cart
         }
     }
 
@@ -22,7 +21,7 @@ class ShoppingCart extends React.Component {
     getShoppingItems = () => {
         let out = []
         let count = 0
-        for(let cartEl of this.state.items){
+        for(let cartEl of this.props.cart){
             out.push(<p key={count}>{cartEl.name}</p>)
             count++;
         }
@@ -33,9 +32,10 @@ class ShoppingCart extends React.Component {
         let items = this.getShoppingItems()
         return (
             <ShoppingCartOpened 
-                cart={this.state.items} 
+                cart={this.props.cart} 
                 setShoppingOpenStatus={this.setShoppingOpenStatus}
-                removeFromShoppingCart={this.props.removeFromShoppingCart}/>
+                removeFromShoppingCart={this.props.removeFromShoppingCart}
+                emptyShoppingCart={this.props.emptyShoppingCart} />
         )
     }
 

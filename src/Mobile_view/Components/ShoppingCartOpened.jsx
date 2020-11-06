@@ -5,14 +5,15 @@ import { faTimes, faMinus, faPlus } from '@fortawesome/free-solid-svg-icons'
 class ShoppingCartOpened extends React.Component {
     constructor(props){
         super();
+        this.state = {
+            cart: props.cart,
+            buyStatus: 'idle'
+        }
         this.setShoppingOpenStatus = (bool) => {
             this.props.setShoppingOpenStatus(bool)
         }
         for(let cartEl of props.cart){
             cartEl.qnt = 1;
-        }
-        this.state = {
-            cart: props.cart
         }
     }
 
@@ -55,6 +56,35 @@ class ShoppingCartOpened extends React.Component {
         return total;
     }
 
+    buyHandling = () => {
+        this.setState({
+            buyStatus: "animation"
+        })
+        window.setTimeout(()=>{
+            this.setState({
+                buyStatus: "done",
+                cart: []
+            })
+            this.props.emptyShoppingCart()
+        }, 3500)
+    }
+
+    buyButton = () => {
+        if(this.state.buyStatus === 'idle'){
+            return (
+                <div className="mobile_shopping_cart_content_total_button" onClick={this.buyHandling}>
+                    <p>KJØP</p>
+                </div>
+            )
+        }
+        else if(this.state.buyStatus == "animation"){
+            return <div className="mobile_shopping_cart_content_total_button spinning"></div>
+        }
+        else if(this.state.buyStatus == "done"){
+            return <div className="mobile_shopping_cart_content_total_button done"></div>
+        }
+    }
+
     render = () => {
         let allItems = this.state.cart.map((el, i) => {
             return this.generateShoppingCartEl(el, i)
@@ -74,9 +104,7 @@ class ShoppingCartOpened extends React.Component {
                             <p><b>Total sum</b></p>
                             <p><b>{totalPrice} kr</b></p>
                         </div>
-                        <div className="mobile_shopping_cart_content_total_button">
-                            <p>KJØP</p>
-                        </div>
+                        {this.buyButton()}
                     </div>
                 </div>
             </div>
