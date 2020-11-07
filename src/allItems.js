@@ -4,7 +4,7 @@ let coffe = [
         desc: "Denne har du smakt før",
         price: 32,
         cat: "kaffe",
-        img: "https://www.metallskilt.no/users/metallskilt_mystore_no/images/88831_NA_Coffee_First_Your_Bullshit_Second_6.png"
+        img: "https://cdn1.npcdn.net/image/15439990457279b422c7035f2bdcacf0459ee4a12c.png?md5id=75124f25b1db7620476f6d70697fec61&new_width=1000&new_height=1000&w=1543214181"
     },
     {
         name: "Cappuccino",
@@ -18,7 +18,7 @@ let coffe = [
         desc: "Når du ikke er helt tøff nok for espresso",
         price: 36,
         cat: "kaffe",
-        img: "https://mixcafe.co/wp-content/uploads/2017/09/americano-mix.png"
+        img: "https://i.pinimg.com/originals/fb/2c/53/fb2c53552965bc81f112092e59eb6f7f.png"
     },
     {
         name: "Iskaffe",
