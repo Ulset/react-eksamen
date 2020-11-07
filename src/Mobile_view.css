@@ -135,6 +135,7 @@ body {
     background-color: #31B492;
     box-shadow: 3px 3px 8px 1px rgba(0,0,0,0.2);
     transition: 0.2s;
+    margin-right: 10px;
 }
 
 .mobile_item_price_container_add_button.clicked {

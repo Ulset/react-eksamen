@@ -33,7 +33,9 @@
 .desktop_worker_tab_container {
     grid-row-start: 1;
     grid-column-start: 2;
+    
 }
+
 
 .desktop_shopping_cart_container {
     grid-row-start: 2;
@@ -53,6 +55,7 @@
     row-gap: 15px;
     overflow-y: auto;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .desktop_item_component {
@@ -62,7 +65,7 @@
     margin: auto;
     background: rgb(187,241,200);
     background: linear-gradient(128deg, rgba(187,241,200,1) 0%, rgba(214,246,222,1) 100%);
-    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 13px rgba(0, 0, 0, 0.26), 0 3px 13px rgba(0, 0, 0, 0.26);
     display: grid;
     grid-template-columns: 150px auto;
 }
