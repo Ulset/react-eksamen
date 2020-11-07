@@ -34,7 +34,7 @@ class ItemComponent extends React.Component {
                     <p>{this.item.desc}</p>
                     <div></div>
                     <div className="mobile_item_price_container">
-                        <p><b>kr: {this.item.price}</b></p>
+                        <p><b>Pris: {this.item.price}</b></p>
                         <div className={`mobile_item_price_container_add_button${this.props.isPlacedInCart ? ' clicked' : ''}`} onClick={this.handleClick}>
                             <FontAwesomeIcon icon={faPlus} size="2x" className="mobile_add_to_cart_icon" />
                         </div>

@@ -1,42 +1,42 @@
 let coffe = [
     {
         name: "Filterkaffe",
-        desc: "Denne har du smakt før",
+        desc: "Klassisk kaffe fra Evergood",
         price: 32,
         cat: "kaffe",
-        img: "https://www.metallskilt.no/users/metallskilt_mystore_no/images/88831_NA_Coffee_First_Your_Bullshit_Second_6.png"
+        img: "https://cdn1.npcdn.net/image/15439990457279b422c7035f2bdcacf0459ee4a12c.png?md5id=75124f25b1db7620476f6d70697fec61&new_width=1000&new_height=1000&w=1543214181"
     },
     {
         name: "Cappuccino",
-        desc: "Feelin fancy are ya",
+        desc: "Frisk cappuccino for deg i farta",
         price: 42,
         cat: "kaffe",
         img: "https://pornovape.com/images/thumbnails/250/250/detailed/1/Cappuccino@2x.png"
     },
     {
         name: "Americano",
-        desc: "Når du ikke er helt tøff nok for espresso",
+        desc: "God og nytraktet americano",
         price: 36,
         cat: "kaffe",
-        img: "https://mixcafe.co/wp-content/uploads/2017/09/americano-mix.png"
+        img: "https://i.pinimg.com/originals/fb/2c/53/fb2c53552965bc81f112092e59eb6f7f.png"
     },
     {
         name: "Iskaffe",
-        desc: "Varm dag?",
+        desc: "Varm dag? Ta en iskaffe og kjøl deg ned",
         price: 42,
         cat: "kaffe",
         img: "https://www.monin.com/us/media/catalog/product/cache/715e3bd7e68644be70dcb763021c03d6/8/f/8fa59f07-1232-4009-ab39-b7c32ea3b5d0-2.png"
     },
     {
         name: "Caffè Mocha",
-        desc: "Kaffe på lørdagskveld",
+        desc: "God kaffe med ekstra krem",
         price: 46,
         cat: "kaffe",
         img: "https://i.pinimg.com/originals/84/91/28/849128e37ef58ebecbeb3cd5febd00f6.png"
     },
     {
         name: "Caffè Latte",
-        desc: "Flere kalorier en du tror!",
+        desc: "Søt variant, men flere kalorier en du tror!",
         price: 48,
         cat: "kaffe",
         img: "https://img.pngio.com/download-free-png-caffe-latte-dlpngcom-latte-png-400_276.png"
@@ -50,21 +50,21 @@ let coffe = [
     },
     {
         name: "Espresso",
-        desc: "Jeg må våkne - NÅ",
+        desc: "God og kjapp, for deg i farta",
         price: 38,
         cat: "kaffe",
         img: "https://www.philips.no/c-dam/b2c/category-pages/Household/coffee/master/faq/cups/Productimg_Lungo.png"
     },
     {
         name: "Cortado",
-        desc: "Eksotisk!",
+        desc: "Eksotisk og frisk variant",
         price: 40,
         cat: "kaffe",
         img: "https://www.monin.com/us/media/catalog/product/cache/715e3bd7e68644be70dcb763021c03d6/3/8/38574fe5-b6d5-4ea7-9066-029cff1f98f7-2.png"
     },
     {
         name: "Iste",
-        desc: "Jeg vil sove",
+        desc: "Kald iste med sugerør og isbiter",
         price: 47,
         cat: "kaffe",
         img: "https://www.cfacdn.com/img/order/menu/Online/Drinks/tea_pdp.png"
@@ -74,52 +74,52 @@ let coffe = [
 let dessert = [
     {
         name: "Brownies",
-        desc: "Hardt på utsiden, myk inni",
+        desc: "Den klassiske, kanskje din favoritt?",
         price: 44,
         cat: "dessert",
         img: "https://www.breadsmith.com/wp-content/uploads/2015/09/Brownie.png"
     },
     {
         name: "Oreokake",
-        desc: "2 favoritter i en",
+        desc: "Stor kake med oreo spredt rundt",
         price: 54,
         cat: "dessert",
         img: "https://3brothersbakery.com/wp-content/uploads/2018/05/Cake8Oreo1.png"
     },
     {
         name: "Kanelbolle",
-        desc: "Smaker jul",
+        desc: "God og fersk fra bakeri",
         price: 46,
         cat: "dessert",
         img: "https://harvestbakery.com/wp-content/uploads/2016/04/CinnamonBunw_CCIcing_clipped_rev_1.png"
     },
     {
         name: "Croissant",
-        desc: "Fransk",
+        desc: "Fransk baguette med fyldig og god smak",
         price: 38,
         cat: "dessert",
         img: "https://medias.bridordefrance.com/media/sys_master/images/h58/h5e/8801910063134.png"
     },
     {
         name: "Chiapudding",
-        desc: "God.",
+        desc: "Fersk og nylagd pudding",
         price: 42,
         cat: "dessert",
         img: "https://eventsand.co/wp-content/uploads/2020/02/Events-and-Co-Catering-Matcha-Chia-Pudding.png"
     },
     {
         name: "Brioche",
-        desc: "Vet ikke helt hva dette er.",
+        desc: "Bakt med hvete med smør, sukker, og egg",
         price: 44,
         cat: "dessert",
-        img: "https://assets.stickpng.com/thumbs/58b16cef102ddecdee0dd025.png"
+        img: "https://lh3.googleusercontent.com/proxy/2H0mNWh6-X1XvxPdUYKddyhfWA-nwu0oIsNX0lMTVSfN8MG1a0krguHv8X0x4P1Jt_dnqWHPQVBUt3zWMhU6ceXnw_PGIAxm4rJdfTxsyzuj4Xc6HTU"
     },
     {
         name: "Scones",
-        desc: "Rart rundstykke",
+        desc: "Ferskt rundstykke bakt med bakepulver",
         price: 37,
         cat: "dessert",
-        img: "https://assets.stickpng.com/thumbs/5895fc35cba9841eabab609d.png"
+        img: "https://www.pngkit.com/png/full/289-2897794_baker-and-scone-freshly-baked-scones-scones-transparent.png"
     },
 ]
 
