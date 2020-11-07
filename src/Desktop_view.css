@@ -166,3 +166,61 @@
     justify-content: center;
     text-align: center;
 }
+
+.desktop_shopping_cart_buy_now {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.desktop_shopping_cart_buy_now_button {
+    height: 50px;
+    width: 60%;
+    background-color: #31B492;
+    border-radius: 5px;
+    margin: auto;
+    box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.16);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+@keyframes spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.desktop_shopping_cart_buy_now_button.spinning {
+    background-color: #FFFF66;
+    height: 50px;
+    width: 50px;
+    border: 1px dashed black;
+    border-radius: 100%;
+    box-shadow: none;
+    animation: spinning;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+}
+
+.desktop_shopping_cart_buy_now_button.done {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+
+
+
+.desktop_shopping_cart_buy_now_button > p {
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}

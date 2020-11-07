@@ -50,7 +50,8 @@ class DesktopView extends React.Component {
                     <WorkerTab  />
                     <ShoppingCartDesktop  
                         cart={this.state.shoppingCart} 
-                        removeFromShoppingCart={this.removeFromShoppingCart}/>
+                        removeFromShoppingCart={this.removeFromShoppingCart}
+                        emptyShoppingCart={this.emptyShoppingCart}/>
                 </div>
             </div>
         )

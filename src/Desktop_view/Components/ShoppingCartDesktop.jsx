@@ -6,7 +6,8 @@ class ShoppingCartDesktop extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            cart: props.cart
+            cart: props.cart,
+            buyStatus: 'idle'
         }
     }
 
@@ -46,6 +47,56 @@ class ShoppingCartDesktop extends React.Component {
         return allItems
     }
 
+    componentDidUpdate = () => {
+        if(this.state.buyStatus === 'done'){
+            if(this.state.cart.length > 0){
+                this.setState({
+                    buyStatus: 'idle'
+                })
+            }
+        }
+    }
+
+    generateThankYou = () => {
+        return (
+            <div className="desktop_shopping_cart_el">
+                <p></p>
+                <p>Takk:)</p>
+                <p></p>
+            </div>
+        )
+    }
+
+    generateBuyNowButton = () => {
+        let buyState = this.state.buyStatus;
+        if(buyState == 'idle'){
+            return (
+                <div className="desktop_shopping_cart_buy_now_button" onClick={this.handleBuyNow}>
+                    <p>KJØP</p>
+                </div>
+            )
+        }
+        else if(buyState == 'spinning'){
+            return <div className="desktop_shopping_cart_buy_now_button spinning"></div>
+        }
+        else if(buyState == 'done'){
+            return <div className="desktop_shopping_cart_buy_now_button done"></div>
+        }
+    }
+
+    handleBuyNow = () => {
+        this.setState({
+            buyStatus:  'spinning'
+        })
+        window.setTimeout(() => {
+            this.props.emptyShoppingCart()
+            this.setState({
+                buyStatus: 'done',
+                cart: this.props.cart
+            })
+        }, 2500)
+    }
+
     render = () => {
         return (
             <div className="desktop_shopping_cart_container desktop_main_content">
@@ -53,10 +104,10 @@ class ShoppingCartDesktop extends React.Component {
                     <h2>Handlekurv</h2>
                 </div>
                 <div className="desktop_shopping_cart_output">
-                    {this.generateShoppingCartElements()}
+                    {this.state.buyStatus !== 'done' ? this.generateShoppingCartElements() : this.generateThankYou()}
                 </div>
                 <div className="desktop_shopping_cart_buy_now">
-                    <p>Buy nowww</p>
+                    {this.generateBuyNowButton()}
                 </div>
             </div>
         )
