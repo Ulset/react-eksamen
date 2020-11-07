@@ -8,7 +8,8 @@ class WorkerTab extends React.Component {
     render = () => {
         return (
             <div className="desktop_worker_tab_container desktop_main_content">
-                <p>Workertab</p>
+                <p>Ansatt: Thomas J. Sourianos</p>
+                <p>Ansattnr: 69420</p>
             </div>
         )
     }

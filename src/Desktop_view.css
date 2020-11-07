@@ -26,6 +26,8 @@
     grid-row-start: 1;
     grid-row-end: span 2;
     grid-column-start: 1;
+    display: grid;
+    grid-template-rows: 5% 95%;
 }
 
 .desktop_worker_tab_container {
@@ -36,14 +38,18 @@
 .desktop_shopping_cart_container {
     grid-row-start: 2;
     grid-column-start: 2;
+    display: grid;
+    grid-template-rows: 10% 75% 15%;
 }
 
 .desktop_item_components_container {
     width: 98%;
+    height: 100%;
     padding: 1%;
     display: grid;
     margin: auto;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: repeat(auto-fit, 150px);
     row-gap: 15px;
     overflow-y: auto;
     justify-content: center;
@@ -62,7 +68,7 @@
 }
 
 .desktop_cat_change {
-    height: 50px;
+    height: 90%;
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -96,4 +102,67 @@
     color: white;
 }
 
+.desktop_worker_tab_container {
+    padding: 5px;
+}
 
+.desktop_worker_tab_container > p:nth-child(1) {
+    font-size: 25px;
+    height: 70%;
+}
+
+.desktop_worker_tab_container > p:nth-child(2) {
+    font-size: 15px;
+}
+
+.desktop_shopping_cart_header {
+    margin: 10px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.desktop_shopping_cart_header > h4 {
+    vertical-align: middle;
+}
+
+.desktop_shopping_cart_output {
+    margin: 10px;
+    overflow-y: auto;
+}
+
+.desktop_shopping_cart_el {
+    width: 85%;
+    height: 40px;
+    max-height: 40px;
+    padding: 5%;
+    margin: 2.5%;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.16);
+    text-align: center;
+}
+
+.desktop_shopping_cart_el > p {
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+}
+
+.desktop_shopping_cart_el_change_qnt {
+    background-color: rgba(6, 214, 160, 0.45);
+    border-radius: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.desktop_shopping_cart_el_change_qnt > p, svg {
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+}
