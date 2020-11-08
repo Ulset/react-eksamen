@@ -64,8 +64,7 @@
     margin: auto;
     background: rgb(187,241,200);
     background: linear-gradient(128deg, rgba(187,241,200,1) 0%, rgba(214,246,222,1) 100%);
-    box-shadow: 5px 5px 13px rgba(0, 0, 0, 0.26);
-    display: grid;
+    box-shadow: 0 3px 13px rgba(0, 0, 0, 0.26), 0 3px 13px rgba(0, 0, 0, 0.26);    display: grid;
     grid-template-columns: 150px auto;
     padding-right: 5px;
 }
