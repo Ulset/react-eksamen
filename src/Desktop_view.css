@@ -68,6 +68,7 @@
     box-shadow: 0 3px 13px rgba(0, 0, 0, 0.26), 0 3px 13px rgba(0, 0, 0, 0.26);
     display: grid;
     grid-template-columns: 150px auto;
+    padding-right: 5px;
 }
 
 .desktop_cat_change {
