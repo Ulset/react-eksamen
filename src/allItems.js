@@ -112,7 +112,7 @@ let dessert = [
         desc: "Bakt med hvete med smør, sukker, og egg",
         price: 44,
         cat: "dessert",
-        img: "https://lh3.googleusercontent.com/proxy/2H0mNWh6-X1XvxPdUYKddyhfWA-nwu0oIsNX0lMTVSfN8MG1a0krguHv8X0x4P1Jt_dnqWHPQVBUt3zWMhU6ceXnw_PGIAxm4rJdfTxsyzuj4Xc6HTU"
+        img: "https://lh3.googleusercontent.com/proxy/_YhNPNj6mgKgLyakxgAMcBryseXNWMZFnPvXkHBbsmmn_oPwyUWPeGiVxq8Tn-p3S-VKat2VJa1mCXkKOVK7iaDvyXpEmo1BNHvzZyeX9KT_qEpw42Q"
     },
     {
         name: "Scones",
