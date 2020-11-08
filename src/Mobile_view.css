@@ -13,9 +13,10 @@ body {
 
 
 .mobile_topbar {
-    padding-top: 20px;
+    padding-top: 15px;
     height: 100px;
     text-align: center;
+    padding-bottom: 15px;
 }
 
 .mobile_topbar > h1 {
@@ -28,7 +29,7 @@ body {
 
 .mobile_topbar > h1:nth-child(2) {
     color: #E09F3E;
-    margin-top: -66px;
+    margin-top: -72px;
 }
 
 .mobile_cat_selector_container {
