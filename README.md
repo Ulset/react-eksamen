@@ -1,4 +1,4 @@
 # Beepbaap
-Ekesamen i grensesnittdesign, laget i React. 
+Eksamen i grensesnittdesign, laget i React. 
 
 Karakter: A
